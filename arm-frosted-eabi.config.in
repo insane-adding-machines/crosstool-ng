@@ -112,8 +112,8 @@ CT_ARCH_32=y
 CT_ARCH_BITNESS=32
 # CT_ARCH_FLOAT_HW is not set
 CT_ARCH_FLOAT_SW=y
-CT_TARGET_CFLAGS=""
-CT_TARGET_LDFLAGS="-lfrosted"
+CT_TARGET_CFLAGS="-fPIC -mlong-calls -fno-common -msingle-pic-base -mno-pic-data-is-text-relative -DMALLOC_PROVIDED"
+CT_TARGET_LDFLAGS="-lgloss"
 # CT_ARCH_alpha is not set
 CT_ARCH_arm=y
 # CT_ARCH_avr is not set
@@ -295,7 +295,7 @@ CT_LIBC_NEWLIB_CUSTOM_VERSION="frosted"
 CT_LIBC_NEWLIB_2_2_or_later=y
 CT_LIBC_NEWLIB_2_1_or_later=y
 CT_LIBC_NEWLIB_2_0_or_later=y
-CT_LIBC_NEWLIB_TARGET_CFLAGS="-fPIC -mlong-calls -fno-common -msingle-pic-base -mno-pic-data-is-text-relative"
+CT_LIBC_NEWLIB_TARGET_CFLAGS="-fPIC -mlong-calls -fno-common -msingle-pic-base -mno-pic-data-is-text-relative -DMALLOC_PROVIDED"
 CT_LIBC_none_AVAILABLE=y
 CT_LIBC_uClibc_AVAILABLE=y
 CT_LIBC_SUPPORT_THREADS_NONE=y
@@ -315,7 +315,7 @@ CT_LIBC_NEWLIB_IO_FLOAT=y
 CT_LIBC_NEWLIB_IO_LDBL=y
 CT_LIBC_NEWLIB_DISABLE_SUPPLIED_SYSCALLS=y
 CT_LIBC_NEWLIB_ENABLE_TARGET_OPTSPACE=y
-CT_LIBC_NEWLIB_EXTRA_CONFIG_ARRAY=""
+CT_LIBC_NEWLIB_EXTRA_CONFIG_ARRAY="CFLAGS_FOR_TARGET=\"-g -Os -mcpu=cortex-m3 -mthumb -mlittle-endian -mthumb-interwork -fPIC -mlong-calls -fno-common -msingle-pic-base -mno-pic-data-is-text-relative -DMALLOC_PROVIDED\""
 
 #
 # C compiler
@@ -371,7 +371,7 @@ CT_CC_GCC_ENABLE_TARGET_OPTSPACE=y
 CT_CC_CXA_ATEXIT=y
 # CT_CC_GCC_DISABLE_PCH is not set
 CT_CC_GCC_LDBL_128=m
-CT_CC_GCC_BUILD_ID=y
+# CT_CC_GCC_BUILD_ID is not set
 CT_CC_GCC_LNK_HASH_STYLE_DEFAULT=y
 # CT_CC_GCC_LNK_HASH_STYLE_SYSV is not set
 # CT_CC_GCC_LNK_HASH_STYLE_GNU is not set
@@ -412,13 +412,11 @@ CT_GMP_NEEDED=y
 CT_MPFR_NEEDED=y
 CT_ISL_NEEDED=y
 CT_MPC_NEEDED=y
-CT_LIBELF_NEEDED=y
 CT_COMPLIBS=y
 CT_GMP=y
 CT_MPFR=y
 CT_ISL=y
 CT_MPC=y
-CT_LIBELF=y
 CT_GMP_V_6_1_0=y
 # CT_GMP_V_6_0_0 is not set
 # CT_GMP_V_5_1_3 is not set
