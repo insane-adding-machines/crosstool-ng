@@ -1,0 +1,17 @@
+diff --git a/scripts/build/binutils/binutils.sh b/scripts/build/binutils/binutils.sh
+index edaf818..fa60002 100644
+--- crosstool-ng/scripts/build/binutils/binutils.sh
++++ crosstool-ng/scripts/build/binutils/binutils.sh
+@@ -34,12 +34,6 @@ do_binutils_get() {
+ do_binutils_extract() {
+     CT_Extract "binutils-${CT_BINUTILS_VERSION}"
+     CT_Patch "binutils" "${CT_BINUTILS_VERSION}"
+-
+-    if [ -n "${CT_ARCH_BINFMT_FLAT}" ]; then
+-        CT_Extract "elf2flt-${CT_ELF2FLT_GIT_CSET}"
+-        CT_Patch "elf2flt" "${CT_ELF2FLT_GIT_CSET}"
+-    fi
+-
+     if [ -n "${CT_ARCH_XTENSA_CUSTOM_NAME}" ]; then
+         CT_ConfigureXtensa "binutils" "${CT_BINUTILS_VERSION}"
+     fi
