@@ -9,6 +9,10 @@ if (! test -f .ct-ng.patched); then
     touch .ct-ng.patched
 fi
 
-cat arm-frosted-eabi.config.in | sed -e "s/__CURRENT_DIR__/$THIS_DIR/g" > .config
+mkdir $PWD/cmd
+cd crosstool-ng
+./configure --prefix=$PWD/../cmd && make && make install
+cd ..
 
-ct-ng build
+cat arm-frosted-eabi.config.in | sed -e "s/__CURRENT_DIR__/$THIS_DIR/g" > .config
+cmd/bin/ct-ng build
