@@ -11,6 +11,7 @@ fi
 
 mkdir $PWD/cmd
 cd crosstool-ng
+autoreconf -i -f
 ./configure --prefix=$PWD/../cmd && make && make install
 cd ..
 
