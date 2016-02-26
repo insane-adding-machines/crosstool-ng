@@ -16,4 +16,5 @@ autoreconf -i -f
 cd ..
 
 cat arm-frosted-eabi.config.in | sed -e "s/__CURRENT_DIR__/$THIS_DIR/g" > .config
+#cmd/bin/ct-ng menuconfig
 cmd/bin/ct-ng build
