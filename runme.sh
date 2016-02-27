@@ -18,10 +18,3 @@ cd ..
 cat arm-frosted-eabi.config.in | sed -e "s/__CURRENT_DIR__/$THIS_DIR/g" > .config
 #cmd/bin/ct-ng menuconfig
 cmd/bin/ct-ng build
-
-# Rebuilding newlib with the new compiler, replace compiler's libc
-cd newlib
-./buildme-frosted.sh
-cp -a build/lib/arm-frosted-eabi/lib/* `echo ~`/x-tools/arm-frosted-eabi/arm-frosted-eabi/lib/
-cd ..
-echo Successful build
