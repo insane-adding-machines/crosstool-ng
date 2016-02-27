@@ -295,7 +295,7 @@ CT_LIBC_NEWLIB_CUSTOM_VERSION="frosted"
 CT_LIBC_NEWLIB_2_2_or_later=y
 CT_LIBC_NEWLIB_2_1_or_later=y
 CT_LIBC_NEWLIB_2_0_or_later=y
-CT_LIBC_NEWLIB_TARGET_CFLAGS="-ggdb -Os -fPIC -mlong-calls -fno-common -msingle-pic-base -mno-pic-data-is-text-relative"
+CT_LIBC_NEWLIB_TARGET_CFLAGS="-ggdb -Os -mcpu=cortex-m3 -mthumb -fPIC -mlong-calls -fno-common -msingle-pic-base -mno-pic-data-is-text-relative"
 CT_LIBC_none_AVAILABLE=y
 CT_LIBC_uClibc_AVAILABLE=y
 CT_LIBC_SUPPORT_THREADS_NONE=y
@@ -309,12 +309,12 @@ CT_THREADS_NONE=y
 #
 # newlib other options
 #
-CT_LIBC_NEWLIB_IO_C99FMT=y
-CT_LIBC_NEWLIB_IO_LL=y
-CT_LIBC_NEWLIB_IO_FLOAT=y
+# CT_LIBC_NEWLIB_IO_C99FMT is not set
+# CT_LIBC_NEWLIB_IO_LL is not set
+# CT_LIBC_NEWLIB_IO_FLOAT is not set
 # CT_LIBC_NEWLIB_IO_LDBL is not set
 CT_LIBC_NEWLIB_DISABLE_SUPPLIED_SYSCALLS=y
-CT_LIBC_NEWLIB_ENABLE_TARGET_OPTSPACE=y
+# CT_LIBC_NEWLIB_ENABLE_TARGET_OPTSPACE is not set
 CT_LIBC_NEWLIB_EXTRA_CONFIG_ARRAY="--with-mode=thumb --with-cpu=cortex-m3 --disable-multilib --disable-newlib-supplied-syscalls"
 
 #
