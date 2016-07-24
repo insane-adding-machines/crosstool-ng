@@ -316,7 +316,7 @@ CT_THREADS_NONE=y
 # CT_LIBC_NEWLIB_IO_LDBL is not set
 CT_LIBC_NEWLIB_DISABLE_SUPPLIED_SYSCALLS=y
 # CT_LIBC_NEWLIB_ENABLE_TARGET_OPTSPACE is not set
-CT_LIBC_NEWLIB_EXTRA_CONFIG_ARRAY="--with-mode=thumb --with-cpu=cortex-m3 --disable-multilib --disable-newlib-supplied-syscalls"
+CT_LIBC_NEWLIB_EXTRA_CONFIG_ARRAY="--with-mode=thumb --with-cpu=cortex-m3 --disable-multilib --disable-newlib-supplied-syscalls --enable-newlib-fvwrite-in-streamio=no --enable-newlib-fseek-optimization=no --enable-newlib_wide_orient=no --enable-newlib-unbuf-stream-opt=yes"
 
 #
 # C compiler
