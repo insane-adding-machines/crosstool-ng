@@ -4,6 +4,3 @@
 [submodule "newlib"]
 	path = newlib
 	url = https://github.com/insane-adding-machines/newlib.git
-[submodule "elf2flt"]
-	path = elf2flt
-	url = https://github.com/insane-adding-machines/elf2flt.git
