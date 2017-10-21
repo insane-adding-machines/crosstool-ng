@@ -15,6 +15,5 @@ autoreconf -i -f
 ./configure --prefix=$PWD/../cmd && make && make install
 cd ..
 
-cat arm-frosted-eabi.config.in | sed -e "s/__CURRENT_DIR__/$THIS_DIR/g"| sed -e "s/PARALLEL_JOBS.*/PARALLEL_JOBS=1/g" > .config
-#cmd/bin/ct-ng menuconfig
+cat arm-frosted-eabi.config.in | sed -e "s/PARALLEL_JOBS.*/PARALLEL_JOBS=1/g" > .config
 cmd/bin/ct-ng build $@
